@@ -92,6 +92,7 @@ Se puede traer mas de una información en una relación. Para detallar visualmen
 MATCH (c:Cliente) -[:CLIENTE_EN] - (v:Venta) -- (p:Producto) -- (t:TipoProducto) return c,v,p,t LIMIT 10;
 ````
 ![Relaciones](Images/relaciones.png)
+
 Podemos hacer filtrado y consultas un poco mas complejas
 ````
 MATCH (c:Cliente) -[:CLIENTE_EN] - (v:Venta) - [:VENDIDO_EN] - (p:Producto) - [:AGRUPA_A] - (t:TipoProducto) WHERE t.TipoProducto = "Informatica" return c,v,p,t LIMIT 10;
