@@ -1,10 +1,10 @@
 <h1 align="center"> Neo4J-Carga - Modelado - Consulta </h1>
+
+Neo4j es una plataforma de datos gráficos que permite almacenar y gestionar datos conectados en forma de grafos. Su uso puede ser diverso, sin embargo en este repositorio, encontrarás un caso de uso sencillo, en dónde la intención es acercarse sutilmente y comenzar a explorar la herramienta. 
+
 ## Tabla de contenidos
+
 - [Carga de los datos](#carga-de-los-datos)
-  - [Carga de producto](#carga-productos)
-  - [Cargar Tipo de Productos](#cargar-tipo-de-productos)
-  - [Cargar Cliente](#cargar-cliente)
-  - [Cargar Venta](#cargar-venta)
 - [Creación de relaciones](#creación-de-relaciones)
 - [Consultas](#consultas)
 - [Conclusión](#Conclusión)
@@ -58,7 +58,7 @@ n.IdProducto = toInteger(row.IdProducto),
 n.Precio = toFloat(row.Precio),
 n.Cantidad = toInteger(row.Cantidad);
 ````
-![img](Images/Carga de datos.jpeg)
+![Carga Datos](Images/Carga-de-datos.jpeg)
 ## Creación de relaciones
 ### Crear las Relaciones entre tipo de producto y prducto
 ````
