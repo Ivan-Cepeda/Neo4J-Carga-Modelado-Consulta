@@ -1,4 +1,13 @@
-# Neo4J-Carga - Modelado - Consulta.
+<h1 align="center"> Neo4J-Carga - Modelado - Consulta </h1>
+## Tabla de contenidos
+- [Carga de los datos](#carga-de-los-datos)
+  - [Carga de producto](#carga-productos)
+  - [Cargar Tipo de Productos](#cargar-tipo-de-productos)
+  - [Cargar Cliente](#cargar-cliente)
+  - [Cargar Venta](#cargar-venta)
+- [Creación de relaciones](#creación-de-relaciones)
+- [Consultas](#consultas)
+- [Conclusión](#Conclusión)
 
 La idea es crear una BD, cargar los datos desde documentos, modelar la base de datos y crear las relaciones, realizar algunas posibles consultas. Para ello se nos entregan 4 archivos, "cliente.csv, producto.csv, tipo_producto.csv, venta.csv".
 
@@ -49,6 +58,7 @@ n.IdProducto = toInteger(row.IdProducto),
 n.Precio = toFloat(row.Precio),
 n.Cantidad = toInteger(row.Cantidad);
 ````
+![img](Images/Carga de datos.jpeg)
 ## Creación de relaciones
 ### Crear las Relaciones entre tipo de producto y prducto
 ````
@@ -81,6 +91,7 @@ Se puede traer mas de una información en una relación. Para detallar visualmen
 ````
 MATCH (c:Cliente) -[:CLIENTE_EN] - (v:Venta) -- (p:Producto) -- (t:TipoProducto) return c,v,p,t LIMIT 10;
 ````
+![Relaciones](Images/relaciones.png)
 Podemos hacer filtrado y consultas un poco mas complejas
 ````
 MATCH (c:Cliente) -[:CLIENTE_EN] - (v:Venta) - [:VENDIDO_EN] - (p:Producto) - [:AGRUPA_A] - (t:TipoProducto) WHERE t.TipoProducto = "Informatica" return c,v,p,t LIMIT 10;
