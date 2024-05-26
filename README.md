@@ -1,6 +1,6 @@
 <h1 align="center"> Neo4J-Carga - Modelado - Consulta </h1>
 
-Neo4j es una plataforma de datos gráficos que permite almacenar y gestionar datos conectados en forma de grafos. Su uso puede ser diverso, sin embargo en este repositorio, encontrarás un caso de uso sencillo, en dónde la intención es acercarse sutilmente y comenzar a explorar la herramienta. 
+Neo4j es una plataforma de datos gráficos que permite almacenar y gestionar datos conectados en forma de grafos. Su uso puede ser diverso, sin embargo en este repositorio, encontrarás un caso de uso sencillo, dónde la intención es acercarse sutilmente y comenzar a explorar la herramienta. 
 
 ## Tabla de contenidos
 
